@@ -4,6 +4,84 @@
   
   
   <entry>
+    <title>RegExp</title>
+    <link href="/2022/09/14/RegExp/"/>
+    <url>/2022/09/14/RegExp/</url>
+    
+    <content type="html"><![CDATA[<h3 id="IP匹配"><a href="#IP匹配" class="headerlink" title="IP匹配"></a>IP匹配</h3><ul><li>支持0.0.0.0到255.255.255.255(没有前导0)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">/^(([<span class="hljs-number">1</span>-<span class="hljs-number">9</span>]?\d|<span class="hljs-number">1</span>\d&#123;<span class="hljs-number">2</span>&#125;|<span class="hljs-number">2</span>[<span class="hljs-number">0</span>-<span class="hljs-number">4</span>]\d|<span class="hljs-number">25</span>[<span class="hljs-number">0</span>-<span class="hljs-number">5</span>])\.)&#123;<span class="hljs-number">3</span>&#125;([<span class="hljs-number">1</span>-<span class="hljs-number">9</span>]?\d|<span class="hljs-number">1</span>\d&#123;<span class="hljs-number">2</span>&#125;|<span class="hljs-number">2</span>[<span class="hljs-number">0</span>-<span class="hljs-number">4</span>]\d|<span class="hljs-number">25</span>[<span class="hljs-number">0</span>-<span class="hljs-number">5</span>])$/<br></code></pre></td></tr></table></figure></li><li>支持000.000.000.000到255.255.255.255(可以含有前导0)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">/^((?:(?:<span class="hljs-number">25</span>[<span class="hljs-number">0</span>-<span class="hljs-number">5</span>]|<span class="hljs-number">2</span>[<span class="hljs-number">0</span>-<span class="hljs-number">4</span>]\d|[<span class="hljs-number">01</span>]?\d?\d)\.)&#123;<span class="hljs-number">3</span>&#125;(?:<span class="hljs-number">25</span>[<span class="hljs-number">0</span>-<span class="hljs-number">5</span>]|<span class="hljs-number">2</span>[<span class="hljs-number">0</span>-<span class="hljs-number">4</span>]\d|[<span class="hljs-number">01</span>]?\d?\d))$/<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>React</title>
+    <link href="/2022/09/14/react/"/>
+    <url>/2022/09/14/react/</url>
+    
+    <content type="html"><![CDATA[<h3 id="useEffect-使用-async-await"><a href="#useEffect-使用-async-await" class="headerlink" title="useEffect 使用 async await"></a>useEffect 使用 async await</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> [data, setData] = <span class="hljs-title function_">useState</span>(&#123; <span class="hljs-attr">courses</span>: [] &#125;);<br>    <br><span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>    (<span class="hljs-keyword">async</span> () =&gt; &#123;<br>        <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> axios.<span class="hljs-title function_">get</span>(<br>            <span class="hljs-string">&quot;http://example.com/api/v1/categories/&quot;</span><br>        );<br>        <span class="hljs-title function_">setData</span>(result.<span class="hljs-property">data</span>);<br>    &#125;)();<br>&#125;, []);<br>    <br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data);<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>antd</title>
+    <link href="/2022/09/14/antd/"/>
+    <url>/2022/09/14/antd/</url>
+    
+    <content type="html"><![CDATA[<h3 id="table"><a href="#table" class="headerlink" title="table"></a>table</h3><ul><li>table实现高度支适应 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">scroll=&#123;&#123;<span class="hljs-attr">y</span>:<span class="hljs-string">&#x27;&#x27;</span><span class="hljs-title function_">calc</span>(100vh-100px)&#125;&#125;<br></code></pre></td></tr></table></figure></li><li>table columns 数量不多的时候scroll的 x 设置100%</li><li>table 默认展开所有行不生效是因为react在初始化render的时候datasource是空的，需要在table前面判断一下datasource是不是有数据</li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MySQL</title>
+    <link href="/2022/09/14/mysql/"/>
+    <url>/2022/09/14/mysql/</url>
+    
+    <content type="html"><![CDATA[<h3 id="mysql-密码的策略问题"><a href="#mysql-密码的策略问题" class="headerlink" title="mysql 密码的策略问题"></a>mysql 密码的策略问题</h3><p>在mysql8.0.1中密码策略变量的变化，有’_’连接符改变为’.’连接符；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">validate_password_length<br>// 改编为：<br>validate_password.length<br></code></pre></td></tr></table></figure><ol><li>查看password密码策略的变量名：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">SHOW VARIABLES LIKE <span class="hljs-string">&#x27;validate_password%&#x27;</span>;<br></code></pre></td></tr></table></figure></li><li>修改validate_password.policy参数的值：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> global validate_password.policy=0;<br></code></pre></td></tr></table></figure></li><li>媳妇爱validate_password.length参数的值来设置密码的最小长度(这个值是由mix_case_count number_count special_count需大于等于这三个值和的最小值)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> global validate_password.length=4;<br></code></pre></td></tr></table></figure></li></ol><h3 id="mysql-命令行清空"><a href="#mysql-命令行清空" class="headerlink" title="mysql 命令行清空"></a>mysql 命令行清空</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">system clear // 调用系统的clear清空<br></code></pre></td></tr></table></figure><h3 id="node-mysql8-0-出现客户端不支持认证协议引发的’ER-NOT-SUPPORTED-AUTH-MODE’问题"><a href="#node-mysql8-0-出现客户端不支持认证协议引发的’ER-NOT-SUPPORTED-AUTH-MODE’问题" class="headerlink" title="node + mysql8.0 出现客户端不支持认证协议引发的’ER_NOT_SUPPORTED_AUTH_MODE’问题"></a>node + mysql8.0 出现客户端不支持认证协议引发的’ER_NOT_SUPPORTED_AUTH_MODE’问题</h3><p>出错原因：<br>导致这个错误的原因是，目前，最新的mysql模块并未完全支持mysql8.0的’caching_sha2_password’加密方式，而’caching_sha2_passwrod’在mysql8.0中是默认的加密方式。因此，下面的命令是默认已经使用了’caching_sha2_password’加密方式，该账号、密码无法在mysql模块中使用。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysql&gt; ALTER USER <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="hljs-string">&#x27;123456&#x27;</span>;<br>Query OK, 0 rows affected (0.12 sec)<br></code></pre></td></tr></table></figure><p>解决方法：<br>从新修改用户root的密码，并制定mysql模块能够支持的加密方式</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysql&gt; ALTER USER <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="hljs-string">&#x27;123456&#x27;</span>;<br>Query OK, 0 rows affected (0.12 sec)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>mac</title>
+    <link href="/2022/09/14/mac/"/>
+    <url>/2022/09/14/mac/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Chrome浏览器快捷键"><a href="#Chrome浏览器快捷键" class="headerlink" title="Chrome浏览器快捷键"></a>Chrome浏览器快捷键</h3><ul><li>command + r 刷新 </li><li>command + t 打开新的标签页</li><li>command + option + i 打开控制台</li><li>command + option + u </li><li>command + y 查看历史记录</li></ul><h3 id="常用的开发工具"><a href="#常用的开发工具" class="headerlink" title="常用的开发工具"></a>常用的开发工具</h3><ul><li>warp iterm 命令行工具</li><li>HaPiGo 聚焦搜索</li><li>Snipaste 截图拾色工具</li><li>Thor launcher 应用切换工具</li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tmux</title>
+    <link href="/2022/09/14/tmux/"/>
+    <url>/2022/09/14/tmux/</url>
+    
+    <content type="html"><![CDATA[<h3 id="鼠标光标切换"><a href="#鼠标光标切换" class="headerlink" title="鼠标光标切换"></a>鼠标光标切换</h3><p>老版本的Tmux开启鼠标模式的方法：先按Ctrl + B， 松开以后，输入冒号，输入set mouse-mode on 回车。 新版本取消了这条命令。<br>在新版本中，开启鼠标模式的方法为：先按Ctrl + B， 松开以后，输入冒号，输入set -g mouse on 回车。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Git</title>
     <link href="/2022/09/09/git/"/>
     <url>/2022/09/09/git/</url>
