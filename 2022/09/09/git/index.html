@@ -24,7 +24,7 @@
 <meta property="og:description" content="Git配置多个用户有时候在公司需要使用自己个人的github账号，但必须保证公司使用的gitlab账号没有影响，这个就需要同一台设备配置多账号。 一、生成ssh密钥分别对github和gitlab生成对应的ssh密钥，并配置git访问不同的host的时候使用不同的密钥  公司团队：1ssh-keygen -t rsa -C &quot;公司邮箱地址&quot; 个人：1ssh-keygen -t">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-09T02:44:34.000Z">
-<meta property="article:modified_time" content="2022-09-09T07:36:04.625Z">
+<meta property="article:modified_time" content="2022-11-21T05:49:34.618Z">
 <meta property="article:author" content="zsk">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -218,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.4k 字
         
       </span>
     
@@ -289,6 +289,7 @@
 <li>local(仓库级) 位于.git&#x2F;config,无论你当前在用的库是什么，特定指向该单一的库，优先级最高。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 公司团队配置</span><br>git config --global user.name <span class="hljs-string">&#x27;gitlab&#x27;</span> // 公司账号名称<br>git config --global user.email <span class="hljs-string">&#x27;gitlab@gitlab.com&#x27;</span> // 公司邮箱<br><br><span class="hljs-comment"># 个人账号配置</span><br>git config --<span class="hljs-built_in">local</span> user.name <span class="hljs-string">&#x27;github&#x27;</span> <br>git config --<span class="hljs-built_in">local</span> user.email <span class="hljs-string">&#x27;github@github.com&#x27;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="四、使用"><a href="#四、使用" class="headerlink" title="四、使用"></a>四、使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 之前的方式:单个账号</span><br>git <span class="hljs-built_in">clone</span> git@github.com:xxxx/xxx.git <span class="hljs-comment">#缺省config配置时</span><br>git <span class="hljs-built_in">clone</span> git@github:xxxx/xxx.git <span class="hljs-comment">#config配置后，等价于第一条语句</span><br><br><span class="hljs-comment"># 现在要改为，git clone git@域名别称：xxxx/xxx.git</span><br><span class="hljs-comment"># 就是使用域名地址的别名来区分</span><br>git <span class="hljs-built_in">clone</span> git@github:xxxx/xxx.git<br>git <span class="hljs-built_in">clone</span> git@gitlab:xxxx/xxx.git<br></code></pre></td></tr></table></figure>
+<h3 id="Git查看-x2F-修改配置文件"><a href="#Git查看-x2F-修改配置文件" class="headerlink" title="Git查看&#x2F;修改配置文件"></a>Git查看&#x2F;修改配置文件</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">vim .git/config<br></code></pre></td></tr></table></figure>
                 
               </div>
             
