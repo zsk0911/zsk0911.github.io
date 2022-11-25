@@ -4,7 +4,20 @@
   
   
   <entry>
-    <title>npm.md</title>
+    <title>CLI Develop</title>
+    <link href="/2022/11/25/CLI-Develop/"/>
+    <url>/2022/11/25/CLI-Develop/</url>
+    
+    <content type="html"><![CDATA[<h3 id="chalk引用报错"><a href="#chalk引用报错" class="headerlink" title="chalk引用报错"></a>chalk引用报错</h3><p>解：新版本的不支持ES Module，下载指定版本</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">npm</span> uninstall chalk<br><br><span class="hljs-attribute">npm</span> install chalk@<span class="hljs-number">4</span>.<span class="hljs-number">1</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>npm</title>
     <link href="/2022/11/25/npm-md/"/>
     <url>/2022/11/25/npm-md/</url>
     
