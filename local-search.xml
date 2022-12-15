@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Linux</title>
+    <link href="/2022/12/15/Linux/"/>
+    <url>/2022/12/15/Linux/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Linux-man-pages-中文配置"><a href="#Linux-man-pages-中文配置" class="headerlink" title="Linux man pages 中文配置"></a>Linux man pages 中文配置</h3><p>:1. 使用 wget 下载安装包，如果没有 wget 可以 Google 查看怎样安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/manpages-zh/manpages-zh-1.5.1.tar.gz --no-check-certificate<br></code></pre></td></tr></table></figure><p>:2. 解压</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar zxvf manpages-zh-1.5.1.tar.gz<br></code></pre></td></tr></table></figure><p>:3 安装</p><p>先进入到解压的文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> manpages-zh-1.5.1<br>./configure --disable-zhtw<br>make &amp;&amp; make install<br></code></pre></td></tr></table></figure><p>:4. 配置别名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs base">cd ~<br>ls -a<br>open -a 编辑器 .bashrc<br></code></pre></td></tr></table></figure><p>在文件后面添加下面的语句，保存，退出</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> cman=<span class="hljs-string">&#x27;man -M /usr/local/share/man/zh_CN&#x27;</span><br><span class="hljs-built_in">source</span> .bashrc<br></code></pre></td></tr></table></figure><p>接着可以使用 alias 查看配置的别名，如果没有问题，那么就可以使用 cman + 命令 来查询了</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CLI Develop</title>
     <link href="/2022/11/25/CLI-Develop/"/>
     <url>/2022/11/25/CLI-Develop/</url>

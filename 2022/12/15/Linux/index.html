@@ -16,21 +16,21 @@
   <meta name="author" content="zsk">
   <meta name="keywords" content="">
   
-    <meta name="description" content="cli工具库 commander 命令行自定义指令 inquirer 命令行询问用户问题，记录回答结果 chalk 控制台输出内容样式美化 ora 控制台loading样式 figlet 控制台打印log easy-table 控制台输出表格 download-git-repo 下载远程模板 依赖有安全问题并且已不再维护 fs-extra 系统fs模块的扩展，提供了更多便利的API，并继承了fs模">
+    <meta name="description" content="Linux man pages 中文配置:1. 使用 wget 下载安装包，如果没有 wget 可以 Google 查看怎样安装 1wget https:&#x2F;&#x2F;storage.googleapis.com&#x2F;google-code-archive-downloads&#x2F;v2&#x2F;code.google.com&#x2F;manpages-zh&#x2F;manpages-zh-1.5.1.tar.gz --no-check-c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CLI Develop">
-<meta property="og:url" content="http://example.com/2022/11/25/CLI-Develop/index.html">
+<meta property="og:title" content="Linux">
+<meta property="og:url" content="http://example.com/2022/12/15/Linux/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="cli工具库 commander 命令行自定义指令 inquirer 命令行询问用户问题，记录回答结果 chalk 控制台输出内容样式美化 ora 控制台loading样式 figlet 控制台打印log easy-table 控制台输出表格 download-git-repo 下载远程模板 依赖有安全问题并且已不再维护 fs-extra 系统fs模块的扩展，提供了更多便利的API，并继承了fs模">
+<meta property="og:description" content="Linux man pages 中文配置:1. 使用 wget 下载安装包，如果没有 wget 可以 Google 查看怎样安装 1wget https:&#x2F;&#x2F;storage.googleapis.com&#x2F;google-code-archive-downloads&#x2F;v2&#x2F;code.google.com&#x2F;manpages-zh&#x2F;manpages-zh-1.5.1.tar.gz --no-check-c">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-25T08:34:42.000Z">
-<meta property="article:modified_time" content="2022-12-13T05:49:21.870Z">
+<meta property="article:published_time" content="2022-12-15T02:11:45.000Z">
+<meta property="article:modified_time" content="2022-12-15T02:29:45.765Z">
 <meta property="article:author" content="zsk">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CLI Develop - blog</title>
+  <title>Linux - blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +195,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CLI Develop"></span>
+            <span id="subtitle" data-typed-text="Linux"></span>
           
         </div>
 
@@ -206,8 +206,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-25 16:34" pubdate>
-          2022年11月25日 下午
+        <time datetime="2022-12-15 10:11" pubdate>
+          2022年12月15日 上午
         </time>
       </span>
     
@@ -218,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          474 字
+          482 字
         
       </span>
     
@@ -229,7 +229,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -267,31 +267,28 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">CLI Develop</h1>
+            <h1 style="display: none">Linux</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="cli工具库"><a href="#cli工具库" class="headerlink" title="cli工具库"></a>cli工具库</h3><ol>
-<li>commander 命令行自定义指令</li>
-<li>inquirer 命令行询问用户问题，记录回答结果</li>
-<li>chalk 控制台输出内容样式美化</li>
-<li>ora 控制台loading样式</li>
-<li>figlet 控制台打印log</li>
-<li>easy-table 控制台输出表格</li>
-<li>download-git-repo 下载远程模板 依赖有安全问题并且已不再维护</li>
-<li>fs-extra 系统fs模块的扩展，提供了更多便利的API，并继承了fs模块的API</li>
-<li>cross-spawn 支持跨平台调用系统上的命令</li>
-<li>git-clone 下载模版</li>
-<li>handlebars 语义模版</li>
-<li>shelljs 脚本语言解析器</li>
-</ol>
-<h3 id="chalk引用报错"><a href="#chalk引用报错" class="headerlink" title="chalk引用报错"></a>chalk引用报错</h3><p>解：新版本不支持ES Module 使用指定版本</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">npm</span> uninstall chalk<br><br><span class="hljs-attribute">npm</span> install chalk@<span class="hljs-number">4</span>.<span class="hljs-number">1</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-<h3 id="inpuirer引用报错"><a href="#inpuirer引用报错" class="headerlink" title="inpuirer引用报错"></a>inpuirer引用报错</h3><p>解决：新版本不支持ES Module 使用指定版本</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">npm</span> uninstall inquirer<br><br><span class="hljs-attribute">npm</span> install inquirer@<span class="hljs-number">8</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
-<h3 id="ora引用报错"><a href="#ora引用报错" class="headerlink" title="ora引用报错"></a>ora引用报错</h3><p>解决：新版本不支持ES Module 使用指定版本</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">npm</span> uninstall ora<br><br><span class="hljs-attribute">npm</span> install ora@<span class="hljs-number">5</span>.<span class="hljs-number">1</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+                <h3 id="Linux-man-pages-中文配置"><a href="#Linux-man-pages-中文配置" class="headerlink" title="Linux man pages 中文配置"></a>Linux man pages 中文配置</h3><p>:1. 使用 wget 下载安装包，如果没有 wget 可以 Google 查看怎样安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/manpages-zh/manpages-zh-1.5.1.tar.gz --no-check-certificate<br></code></pre></td></tr></table></figure>
+
+<p>:2. 解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar zxvf manpages-zh-1.5.1.tar.gz<br></code></pre></td></tr></table></figure>
+
+<p>:3 安装</p>
+<p>先进入到解压的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> manpages-zh-1.5.1<br>./configure --disable-zhtw<br>make &amp;&amp; make install<br></code></pre></td></tr></table></figure>
+
+<p>:4. 配置别名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs base">cd ~<br>ls -a<br>open -a 编辑器 .bashrc<br></code></pre></td></tr></table></figure>
+
+<p>在文件后面添加下面的语句，保存，退出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> cman=<span class="hljs-string">&#x27;man -M /usr/local/share/man/zh_CN&#x27;</span><br><span class="hljs-built_in">source</span> .bashrc<br></code></pre></td></tr></table></figure>
+
+<p>接着可以使用 alias 查看配置的别名，如果没有问题，那么就可以使用 cman + 命令 来查询了</p>
 
                 
               </div>
@@ -309,8 +306,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CLI Develop</div>
-      <div>http://example.com/2022/11/25/CLI-Develop/</div>
+      <div>Linux</div>
+      <div>http://example.com/2022/12/15/Linux/</div>
     </div>
     <div class="license-meta">
       
@@ -322,7 +319,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月25日</div>
+          <div>2022年12月15日</div>
         </div>
       
       
@@ -352,18 +349,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/15/Linux/" title="Linux">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Linux</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/25/npm-md/" title="npm">
-                        <span class="hidden-mobile">npm</span>
+                      <a href="/2022/11/25/CLI-Develop/" title="CLI Develop">
+                        <span class="hidden-mobile">CLI Develop</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
